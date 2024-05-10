@@ -39,7 +39,7 @@ var participantSchema = {
                     },
                     "fistname": {
                         "type": "string",
-                        "format": "^[A-Za-z\\s]*$",
+                        "pattern": "^[A-Za-z\\s]*$",
                         "minLength": 2,
           				"maxLength": 100,
                         "default": "",
@@ -50,7 +50,7 @@ var participantSchema = {
                     },
                     "lastname": {
                         "type": "string",
-                        "format": "^[A-Za-z\\s]*$",
+                        "pattern": "^[A-Za-z\\s]*$",
                         "minLength": 2,
           				"maxLength": 100,
                         "default": "",
@@ -101,7 +101,7 @@ var participantSchema = {
                 "properties": {
                     "companyname": {
                         "type": "string",
-                        "format": "^[A-Za-z\\s]*$",
+                        "pattern": "^[A-Za-z\\s]*$",
                         "minLength": 2,
           				"maxLength": 200,
                         "default": "",
@@ -120,7 +120,7 @@ var participantSchema = {
                     },
                     "currency": {
                         "type": "string",
-                        "format": "^[A-Za-z\\s]*$",
+                        "pattern": "^[A-Za-z\\s]*$",
                         "minLength": 2,
           				"maxLength": 100,
                         "default": "",
@@ -159,7 +159,7 @@ var participantSchema = {
                 "properties": {
                     "country": {
                         "type": "string",
-                        "format": "^[A-Za-z\\s]*$",
+                        "pattern": "^[A-Za-z\\s]*$",
                         "minLength": 2,
           				"maxLength": 200,
                         "default": "",
@@ -170,7 +170,7 @@ var participantSchema = {
                     },
                     "city": {
                         "type": "string",
-                        "format": "^[A-Za-z\\s]*$",
+                        "pattern": "^[A-Za-z\\s]*$",
                         "minLength": 2,
           				"maxLength": 200,
                         "default": "",
