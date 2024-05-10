@@ -39,6 +39,9 @@ var participantSchema = {
                     },
                     "fistname": {
                         "type": "string",
+                        "format": "^[A-Za-z\\s]*$",
+                        "minLength": 2,
+          				"maxLength": 100,
                         "default": "",
                         "title": "The fistname Schema",
                         "examples": [
@@ -47,6 +50,9 @@ var participantSchema = {
                     },
                     "lastname": {
                         "type": "string",
+                        "format": "^[A-Za-z\\s]*$",
+                        "minLength": 2,
+          				"maxLength": 100,
                         "default": "",
                         "title": "The lastname Schema",
                         "examples": [
@@ -95,6 +101,9 @@ var participantSchema = {
                 "properties": {
                     "companyname": {
                         "type": "string",
+                        "format": "^[A-Za-z\\s]*$",
+                        "minLength": 2,
+          				"maxLength": 200,
                         "default": "",
                         "title": "The companyname Schema",
                         "examples": [
@@ -111,6 +120,9 @@ var participantSchema = {
                     },
                     "currency": {
                         "type": "string",
+                        "format": "^[A-Za-z\\s]*$",
+                        "minLength": 2,
+          				"maxLength": 100,
                         "default": "",
                         "title": "The currency Schema",
                         "examples": [
@@ -147,6 +159,9 @@ var participantSchema = {
                 "properties": {
                     "country": {
                         "type": "string",
+                        "format": "^[A-Za-z\\s]*$",
+                        "minLength": 2,
+          				"maxLength": 200,
                         "default": "",
                         "title": "The country Schema",
                         "examples": [
@@ -155,6 +170,9 @@ var participantSchema = {
                     },
                     "city": {
                         "type": "string",
+                        "format": "^[A-Za-z\\s]*$",
+                        "minLength": 2,
+          				"maxLength": 200,
                         "default": "",
                         "title": "The city Schema",
                         "examples": [
