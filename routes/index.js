@@ -55,7 +55,7 @@ router.post('/login', jsonParser, function(req, res, next) {
   res.jsend.success({"statusCode": 200, "result": "You are now logged in.", "username": filteredArray[0].username, "token": token});
 });
 
-router.post('/participants/add'/*, isAuth*/, function(req, res, next) {
+router.post('/participants/add', isAuth, function(req, res, next) {
   const newParticipant = req.body;
   const validate = ajv.compile(schema);
   const valid = validate(newParticipant);
@@ -66,14 +66,14 @@ router.post('/participants/add'/*, isAuth*/, function(req, res, next) {
   res.jsend.success({"statusCode": 200, "result": newParticipant});
 });
 
-router.get('/participants'/*, isAuth*/, function(req, res, next) {
+router.get('/participants', isAuth, function(req, res, next) {
   if(participants.length === 0) {
     return res.jsend.fail({"statusCode": 400, "result": "There are NO participants!"});
   };
   res.jsend.success({"statusCode": 200, "result": participants});
 });
 
-router.get('/participants/details'/*, isAuth*/, function(req, res, next) {
+router.get('/participants/details', isAuth, function(req, res, next) {
   if(participants.length === 0) {
     return res.jsend.fail({"statusCode": 400, "result": "There are NO participants!"});
   };
@@ -81,7 +81,7 @@ router.get('/participants/details'/*, isAuth*/, function(req, res, next) {
   res.jsend.success({"statusCode": 200, "result": result});
 });
 
-router.get('/participants/details/:email'/*, isAuth*/, function(req, res, next) {
+router.get('/participants/details/:email', isAuth, function(req, res, next) {
   if(participants.length === 0) {
     return res.jsend.fail({"statusCode": 400, "result": "There are NO participants!"});
   };
@@ -96,7 +96,7 @@ router.get('/participants/details/:email'/*, isAuth*/, function(req, res, next) 
   res.jsend.success({"statusCode": 200, "result": result});
 });
 
-router.get('/participants/work/:email'/*, isAuth*/, function(req, res, next) {
+router.get('/participants/work/:email', isAuth, function(req, res, next) {
   if(participants.length === 0) {
     return res.jsend.fail({"statusCode": 400, "result": "There are NO participants!"});
   };
@@ -111,7 +111,7 @@ router.get('/participants/work/:email'/*, isAuth*/, function(req, res, next) {
   res.jsend.success({"statusCode": 200, "result": result});
 });
 
-router.get('/participants/home/:email'/*, isAuth*/, function(req, res, next) {
+router.get('/participants/home/:email', isAuth, function(req, res, next) {
   if(participants.length === 0) {
     return res.jsend.fail({"statusCode": 400, "result": "There are NO participants!"});
   };
@@ -126,7 +126,7 @@ router.get('/participants/home/:email'/*, isAuth*/, function(req, res, next) {
   res.jsend.success({"statusCode": 200, "result": result});
 });
 
-router.delete('/participants/:email'/*, isAuth*/, function(req, res, next) {
+router.delete('/participants/:email', isAuth, function(req, res, next) {
   if(participants.length === 0) {
     return res.jsend.fail({"statusCode": 400, "result": "There are NO participants!"});
   };
@@ -141,7 +141,7 @@ router.delete('/participants/:email'/*, isAuth*/, function(req, res, next) {
   res.jsend.success({"statusCode": 200, "result": "The participant has been deleted!"});
 });
 
-router.put('/participants/:email'/*, isAuth*/, function(req, res, next) {
+router.put('/participants/:email', isAuth, function(req, res, next) {
   if(participants.length === 0) {
     return res.jsend.fail({"statusCode": 400, "result": "There are NO participants!"});
   };
