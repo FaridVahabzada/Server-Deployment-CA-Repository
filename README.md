@@ -58,3 +58,4 @@ Remarks for the users or the issues to be fixed for the future app versions, as 
 ![Possible Bug](/public/images/bug.png)
 \
 **This issue** can easily be solved by sending the **same** request over **again**.
++ For creating the JSON schema the [JSON Schema](https://www.jsonschema.net/) page was used. And for validating any created JSONs, we used the [JSON Schema Validator](https://www.jsonschemavalidator.net/) page.
